@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jokenpo</title>
+    <script src="jokenpo.js"></script>
+    <style>
+      body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: grid;
+        background-color:#fffafa;
+        border: none;
+        margin: none;
+      }
+      
+      .titulo{
+        display: grid;
+        text-align: center;
+      }
+
+      .areaJogo{
+        display: grid;
+        grid-template-columns:50% 50%;
+        height: auto;
+        width: auto;
+      }
+
+      .boxJogador{
+        text-align: center;
+        display: grid;
+        width: 95%;
+        height: auto;
+        padding: 1%;
+      }
+
+      .boxJogador img{
+        display: grid;
+        justify-self: center;
+      }
+
+
+      .imgJogada{
+        display: grid;
+        justify-self: center;
+        width: 250px;
+      }
+
+      .esquerda{
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+
+      .jogarEresultados{
+        display: grid;
+        width: 100%;
+        justify-items: center;
+      }
+
+      .btnJogar{
+        display: flex;
+        background-color: blueviolet;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+        border-radius: 15px;
+        text-decoration: none;
+      }
+      
+      .btnJogar:hover{
+        background-color: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="titulo">Jokenpo</h1>
+    <div class="areaJogo">
+      <div class="boxJogador">
+        <img src="img/jogador.png" class="iconPlayer" width="50px">
+        <h2> Jogador 1 </h2>
+        <img id="jogada-p1" class="imgJogada" src="">  </a>
+      </div>
+      <div class="boxJogador">
+        <img src="img/jogador.png" class="iconPlayer" width="50px">
+        <h2> Jogador 2 </h2>
+        <img id="jogada-p2" class="imgJogada esquerda" src="">  </a>
+      </div>
+    </div>
+    <div class="jogarEresultados">
+      <h1 id="resultado">  </h1>
+      <a class="btnJogar" href="#" onclick="jokenpo.jogadorJogou();"> Jogar </a>
+  </div>
+
+  </body>
+</html>
